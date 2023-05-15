@@ -1,0 +1,39 @@
+@import url("index.css");
+
+h1 {
+  margin: 0 0 30px 4px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  font-weight: 400;
+}
+
+h3 {
+  margin-top: 5px;
+  color: var(--slate);
+  line-height: 0.9;
+}
+
+p {
+  font-family: var(--font-sans);
+  margin: 35px 0 0;
+  max-width: 540px;
+}
+
+.big_button {
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  padding: 1.25rem 1.75rem;
+  font-size: var(--fz-sm);
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: 50px;
+}
+
+.big_button:hover {
+  background-color: var(--green-tint);
+}
