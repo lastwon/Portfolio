@@ -36,6 +36,9 @@ ol li {
   position: relative;
   counter-increment: item 1;
   padding: 10px;
+  font-size: var(--fz-xs);
+  font-family: var(--font-mono);
+  color: var(--lightest-slate);
 }
 
 ol li:before {

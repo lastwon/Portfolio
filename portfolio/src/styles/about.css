@@ -18,6 +18,10 @@ h2 {
   list-style: none;
 }
 
+p:nth-child(1) {
+  margin-top: 10px;
+}
+
 .skills-list li {
   position: relative;
   margin-bottom: 10px;
