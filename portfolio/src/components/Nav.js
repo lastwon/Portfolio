@@ -1,7 +1,16 @@
 import React from "react";
+import logo from "../images/logo.svg";
 
 const Nav = () => {
-  return <div>Nav</div>;
+  return (
+    <nav>
+      <ul>
+        <li>
+          <img src={logo} alt="" />
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
 export default Nav;
