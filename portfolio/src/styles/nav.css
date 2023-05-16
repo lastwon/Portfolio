@@ -1,7 +1,7 @@
 @import url("index.css");
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 11;
   padding: 0px 50px;
