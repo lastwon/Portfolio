@@ -5,6 +5,7 @@ h2 {
 .inner {
   display: grid;
   grid-template-columns: 3fr 2fr;
+  padding-top: 10px;
   grid-gap: 50px;
 }
 

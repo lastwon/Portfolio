@@ -7,6 +7,7 @@
 .innerr {
   display: flex;
   gap: 25px;
+  padding-top: 10px;
   align-items: flex-start;
 }
 
@@ -61,7 +62,28 @@ button {
 .job-panel {
   width: 100%;
   height: auto;
-  padding: 5px 5px;
+  padding: 0px 5px;
+}
+
+.job-panel h3 {
+  font-size: var(--fz-xl);
+  margin-bottom: 2px;
+  font-weight: 500;
+  line-height: 1.3;
+  font-family: var(--font-sans);
+  color: var(--lightest-slate);
+}
+
+.job-panel span {
+  color: var(--green);
+}
+
+.when {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
 }
 
 .job-panel ul {
