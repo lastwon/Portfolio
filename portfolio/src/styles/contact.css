@@ -1,0 +1,31 @@
+.contact {
+  max-width: 600px;
+  margin: 0px auto 100px;
+  text-align: center;
+}
+
+.contact .project-overline {
+  display: block;
+  font-weight: 400;
+  font-size: var(--fz-md);
+  font-family: var(--font-mono);
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.contact .project-overline::before {
+  bottom: 0px;
+  font-size: var(--fz-sm);
+}
+
+.contact .project-overline::after {
+  width: 0;
+}
+
+.contact-title {
+  font-size: clamp(40px, 5vw, 60px);
+}
+
+.contact p {
+  max-width: 100%;
+}

@@ -92,6 +92,7 @@ button {
   margin: 0;
   list-style: none;
   font-size: var(--fz-lg);
+  font-family: var(--font-sans);
 }
 
 .job-panel ul li {
