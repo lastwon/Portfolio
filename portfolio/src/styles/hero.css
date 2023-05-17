@@ -1,5 +1,87 @@
 @import url("index.css");
 
+.side-left {
+  bottom: 0px;
+  width: 40px;
+  position: fixed;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  color: var(--light-slate);
+}
+
+.side-socials {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.side-socials li a {
+  padding: 10px;
+}
+
+.side-socials li a:hover {
+  transform: translateY(-3px);
+}
+
+.side-socials li:last-of-type {
+  margin-bottom: 20px;
+}
+
+.side-socials::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--light-slate);
+}
+
+.side-right {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: auto;
+  right: 40px;
+  z-index: 10;
+  color: var(--light-slate);
+}
+
+.side-email {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.side-email a {
+  margin: 20px auto;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: var(--fz-lg);
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+}
+
+.side-email a:hover {
+  transform: translateY(-3px);
+}
+
+.side-email::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--light-slate);
+}
+
 h1 {
   margin: 0 0 30px 4px;
   color: var(--green);

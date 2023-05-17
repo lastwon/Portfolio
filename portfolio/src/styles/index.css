@@ -139,7 +139,7 @@ a:focus {
 
 .numbered-heading:before {
   position: relative;
-  counter-increment: section;
+  counter-increment: section 1;
   content: "0" counter(section) ".";
   margin-right: 10px;
   color: var(--green);
