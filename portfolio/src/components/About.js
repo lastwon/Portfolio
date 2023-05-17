@@ -4,7 +4,7 @@ import dainius from "../images/Dainius.jpg";
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <h2 className="numbered-heading">About Me</h2>
       <div className="inner">
         <div>

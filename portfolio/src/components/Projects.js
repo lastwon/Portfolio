@@ -13,6 +13,7 @@ const Projects = () => {
     {
       id: 1,
       link: "https://www.google.com/",
+      git: "https://github.com/lastwon/React-Expense-Tracker",
       name: "Expense Tracker",
       desc: "The app allows user to enter expenses based on the date which he can see later in the graph by optionally selecting a year.",
       used: ["HTML", "CSS", "JavaScript", "React"],
@@ -21,6 +22,7 @@ const Projects = () => {
     {
       id: 2,
       link: "https://www.google.com/",
+      git: "https://github.com/lastwon/Vantage",
       name: "Architecture Landing Page",
       desc: "Landing page built with HTML and CSS using design from Figma",
       used: ["HTML", "CSS", "Figma"],
@@ -29,6 +31,7 @@ const Projects = () => {
     {
       id: 3,
       link: "https://www.google.com/",
+      git: "https://github.com/lastwon/Webfolio",
       name: "Designer Landing Page",
       desc: "Landing page built with HTML and CSS using design from Figma",
       used: ["HTML", "CSS", "Figma"],
@@ -36,7 +39,8 @@ const Projects = () => {
     },
     {
       id: 4,
-      link: "https://www.google.com/",
+      link: "https://restaurante-vj7y.onrender.com/",
+      git: "https://github.com/lastwon/Restaurant",
       name: "Restaurante",
       desc: "The app allows users to share his favorite restaurant, all data user entered save in the JSON fle.",
       used: [
@@ -52,7 +56,7 @@ const Projects = () => {
   ];
 
   return (
-    <section>
+    <section id="work">
       <h2 className="numbered-heading">Some Things I've Built</h2>
       <ul className="projects">
         {AllProjects.map((project) => (
@@ -74,10 +78,10 @@ const Projects = () => {
                   ))}
                 </ul>
                 <div className="project-links">
-                  <a href="" target="_blank" rel="noreferrer">
+                  <a href={project.git} target="_blank" rel="noreferrer">
                     <FiGithub style={{ width: "20px", height: "20px" }} />
                   </a>
-                  <a href="" target="_blank" rel="noreferrer">
+                  <a href={project.link} target="_blank" rel="noreferrer">
                     <FiExternalLink
                       style={{
                         width: "20px",

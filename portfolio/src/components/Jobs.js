@@ -55,7 +55,7 @@ const Jobs = () => {
   ];
 
   return (
-    <section className="experience">
+    <section id="experience" className="experience">
       <h2 className="numbered-heading">Where I've Worked</h2>
       <div className="innerr">
         <div className="job-list">

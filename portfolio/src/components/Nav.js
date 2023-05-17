@@ -2,24 +2,28 @@ import React from "react";
 import logo from "../images/logo.png";
 import "../styles/nav.css";
 
+import resume from "../images/resume.pdf";
+
 const Nav = () => {
   return (
     <nav>
-      <img src={logo} alt="mylogo" />
+      <a href="#home">
+        <img src={logo} alt="mylogo" />
+      </a>
       <ol className="links">
         <li>
-          <a href="">About</a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="">Experience</a>
+          <a href="#experience">Experience</a>
         </li>
         <li>
-          <a href="">Work</a>
+          <a href="#work">Work</a>
         </li>
         <li>
-          <a href="">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
-        <a className="resume" href="">
+        <a className="resume" href={resume}>
           Resume
         </a>
       </ol>
