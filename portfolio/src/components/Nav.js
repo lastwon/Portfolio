@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../images/logo.png";
 import "../styles/nav.css";
 
 import resume from "../images/resume.pdf";
 
 const Nav = () => {
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+  const [top, setTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const visible = prevScrollPos > currentScrollPos;
+
+      setPrevScrollPos(currentScrollPos);
+      setVisible(visible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
+  const navClass = `${visible ? "shadow" : "nav-hidden"} ${
+    window.pageYOffset < 50 ? "no-shadow" : ""
+  }`;
+
   return (
-    <nav>
+    <nav className={navClass}>
       <a href="#home">
         <img src={logo} alt="mylogo" />
       </a>

@@ -16,6 +16,19 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
+}
+
+.shadow {
+  box-shadow: 0 10px 30px -10px var(--navy-shadow);
+}
+
+.no-shadow {
+  box-shadow: none;
 }
 
 img {
