@@ -21,3 +21,21 @@ footer {
 .footer-text a {
   padding: 10px;
 }
+
+.footer-links {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 270px;
+    padding-left: 0;
+    margin: 0px auto 10px;
+    color: var(--light-slate);
+    list-style: none;
+  }
+}

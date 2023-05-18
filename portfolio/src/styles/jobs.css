@@ -12,6 +12,12 @@
   align-items: flex-start;
 }
 
+@media (max-width: 600px) {
+  .innerr {
+    display: block;
+  }
+}
+
 .job-list {
   position: relative;
   z-index: 3;
@@ -19,6 +25,15 @@
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@media (max-width: 600px) {
+  .job-list {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+  }
 }
 
 .job-button {

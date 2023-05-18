@@ -10,6 +10,19 @@
   color: var(--light-slate);
 }
 
+@media (max-width: 1080px) {
+  .side-left {
+    left: 20px;
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-left {
+    display: none;
+  }
+}
+
 .side-socials {
   display: flex;
   flex-direction: column;
@@ -49,6 +62,19 @@
   right: 40px;
   z-index: 10;
   color: var(--light-slate);
+}
+
+@media (max-width: 1080px) {
+  .side-right {
+    right: 20px;
+    left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-right {
+    display: none;
+  }
 }
 
 .side-email {

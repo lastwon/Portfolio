@@ -9,6 +9,12 @@ h2 {
   grid-gap: 50px;
 }
 
+@media (max-width: 768px) {
+  .inner {
+    display: block;
+  }
+}
+
 .skills-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -43,6 +49,12 @@ p:nth-child(1) {
 .about {
   position: relative;
   max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    margin: 50px auto 0 auto;
+  }
 }
 
 .wrapper {
