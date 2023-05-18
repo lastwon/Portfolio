@@ -7,7 +7,6 @@ import resume from "../images/resume.pdf";
 const Nav = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
-  const [top, setTop] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
