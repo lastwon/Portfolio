@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useInView, animated } from "@react-spring/web";
 
 import Nav from "./components/Nav";
 import "../src/styles/index.css";
@@ -12,6 +13,74 @@ import Loader from "./components/Loader";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+
+  const [aboutRef, aboutSprings] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+    }),
+    {
+      rootMargin: "-40% 0%",
+      once: "true",
+    }
+  );
+
+  const [jobsRef, jobsSprings] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+    }),
+    {
+      rootMargin: "-40% 0%",
+      once: "true",
+    }
+  );
+
+  const [projectsRef, projectsSprings] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+    }),
+    {
+      rootMargin: "-40% 0%",
+      once: "true",
+    }
+  );
+
+  const [contactRef, contactSprings] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 100,
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+      },
+    }),
+    {
+      rootMargin: "-40% 0%",
+      once: "true",
+    }
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,10 +99,18 @@ function App() {
           <Nav />
           <main>
             <Hero />
-            <About />
-            <Jobs />
-            <Projects />
-            <Contact />
+            <animated.div ref={aboutRef} style={aboutSprings}>
+              <About />
+            </animated.div>
+            <animated.div ref={jobsRef} style={jobsSprings}>
+              <Jobs />
+            </animated.div>
+            <animated.div ref={projectsRef} style={projectsSprings}>
+              <Projects />
+            </animated.div>
+            <animated.div ref={contactRef} style={contactSprings}>
+              <Contact />
+            </animated.div>
           </main>
           <Footer />
         </>

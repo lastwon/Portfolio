@@ -29,6 +29,7 @@ nav {
 
 .no-shadow {
   box-shadow: none;
+  height: 100px;
 }
 
 img {

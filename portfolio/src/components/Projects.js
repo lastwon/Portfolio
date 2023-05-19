@@ -1,5 +1,7 @@
 import React from "react";
+
 import "../styles/projects.css";
+
 import { FiGithub } from "react-icons/fi";
 import { FiExternalLink } from "react-icons/fi";
 

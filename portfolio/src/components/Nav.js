@@ -64,6 +64,8 @@ const Nav = () => {
         <a
           className="resume"
           href={resume}
+          target="_blank"
+          rel="noreferrer noopener"
           style={{
             transitionDelay: "400ms",
             transform: mounted ? "translateY(0%)" : "translateY(-200%)",
