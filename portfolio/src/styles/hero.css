@@ -8,6 +8,7 @@
   right: auto;
   z-index: 10;
   color: var(--light-slate);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 @media (max-width: 1080px) {
@@ -62,6 +63,7 @@
   right: 40px;
   z-index: 10;
   color: var(--light-slate);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 @media (max-width: 1080px) {

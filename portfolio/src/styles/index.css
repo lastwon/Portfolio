@@ -88,7 +88,7 @@ main {
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  padding: 200px 150px;
+  padding: 200px 150px 50px 150px;
 }
 
 @media (max-width: 1080px) {
@@ -113,6 +113,7 @@ section {
   margin: 0 auto;
   padding: 100px 0;
   max-width: 1000px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 @media (max-width: 768px) {
@@ -137,10 +138,12 @@ h6 {
   font-weight: 600;
   color: var(--lightest-slate);
   line-height: 1.1;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 p {
   margin: 0 0 15px 0;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .big-heading {

@@ -52,6 +52,7 @@ ol li {
   font-size: var(--fz-xs);
   font-family: var(--font-mono);
   color: var(--lightest-slate);
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 ol li:before {
