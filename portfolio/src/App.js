@@ -12,24 +12,14 @@ import Loader from "./components/Loader";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-      setIsTransitioning(true);
     }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    if (isTransitioning) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 500); // Adjust the duration of the transition here
-    }
-  }, [isTransitioning]);
 
   return (
     <>
@@ -38,7 +28,7 @@ function App() {
       ) : (
         <>
           <Nav />
-          <main className={isTransitioning ? "" : "main-visible"}>
+          <main>
             <Hero />
             <About />
             <Jobs />
