@@ -5,6 +5,12 @@
   counter-reset: section 3;
 }
 
+@media (max-width: 768px) {
+  .contact {
+    margin: 0px auto 50px;
+  }
+}
+
 .contact .project-overline {
   display: block;
   font-weight: 400;
