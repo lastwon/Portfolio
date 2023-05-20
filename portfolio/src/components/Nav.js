@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useInView, animated } from "@react-spring/web";
+
 import logo from "../images/logo.png";
 import "../styles/nav.css";
 
@@ -41,6 +43,23 @@ const Nav = () => {
     setMounted(true);
   }, []);
 
+  const [resumeRef, resumeSprings] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        transform: "translateY(-100%)",
+      },
+      to: {
+        opacity: 1,
+        transform: "translateY(0%)",
+      },
+    }),
+    {
+      rootMargin: "0% 0%",
+      once: true,
+    }
+  );
+
   return (
     <nav className={navClass}>
       <a
@@ -61,18 +80,16 @@ const Nav = () => {
             <a href={`#${item.text.toLowerCase()}`}>{item.text}</a>
           </li>
         ))}
-        <a
-          className="resume"
-          href={resume}
-          target="_blank"
-          rel="noreferrer noopener"
-          style={{
-            transitionDelay: "400ms",
-            transform: mounted ? "translateY(0%)" : "translateY(-200%)",
-          }}
-        >
-          Resume
-        </a>
+        <animated.div ref={resumeRef} style={resumeSprings}>
+          <a
+            className="resume"
+            href={resume}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Resume
+          </a>
+        </animated.div>
       </ol>
     </nav>
   );

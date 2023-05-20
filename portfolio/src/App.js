@@ -18,7 +18,7 @@ function App() {
     () => ({
       from: {
         opacity: 0,
-        y: 100,
+        y: 0,
       },
       to: {
         opacity: 1,
@@ -35,7 +35,7 @@ function App() {
     () => ({
       from: {
         opacity: 0,
-        y: 100,
+        y: 0,
       },
       to: {
         opacity: 1,
@@ -52,7 +52,7 @@ function App() {
     () => ({
       from: {
         opacity: 0,
-        y: 100,
+        y: 0,
       },
       to: {
         opacity: 1,
@@ -68,8 +68,8 @@ function App() {
   const [contactRef, contactSprings] = useInView(
     () => ({
       from: {
-        opacity: 0,
-        y: 100,
+        opacity: -200,
+        y: 0,
       },
       to: {
         opacity: 1,
@@ -77,7 +77,7 @@ function App() {
       },
     }),
     {
-      rootMargin: "-40% 0%",
+      rootMargin: "-10% 0%",
       once: "true",
     }
   );

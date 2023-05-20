@@ -1,5 +1,9 @@
 @import url("index.css");
 
+.projects-section {
+  counter-reset: section 2;
+}
+
 .projects {
   position: relative;
   display: flex;

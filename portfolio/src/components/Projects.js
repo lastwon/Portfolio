@@ -58,7 +58,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="work">
+    <section id="work" className="projects-section">
       <h2 className="numbered-heading">Some Things I've Built</h2>
       <ul className="projects">
         {AllProjects.map((project) => (
