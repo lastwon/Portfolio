@@ -163,6 +163,10 @@
   margin-top: 25px;
 }
 
+.project-description p {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .project-description {
     background-color: transparent;

@@ -14,7 +14,7 @@ const Projects = () => {
   const AllProjects = [
     {
       id: 1,
-      link: "https://www.google.com/",
+      link: "https://budgetmakers.netlify.app/",
       git: "https://github.com/lastwon/React-Expense-Tracker",
       name: "Expense Tracker",
       desc: "The app allows user to enter expenses based on the date which he can see later in the graph by optionally selecting a year.",

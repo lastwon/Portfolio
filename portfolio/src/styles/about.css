@@ -25,7 +25,7 @@ h2 {
   list-style: none;
 }
 
-p:nth-child(1) {
+.inner p:nth-child(1) {
   margin-top: 10px;
 }
 
