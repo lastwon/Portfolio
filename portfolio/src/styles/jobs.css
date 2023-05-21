@@ -5,10 +5,6 @@
   counter-reset: section 1;
 }
 
-.overflow {
-  overflow: hidden;
-}
-
 .innerr {
   display: flex;
   gap: 25px;
