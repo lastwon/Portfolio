@@ -7,7 +7,14 @@ import "../styles/loader.css";
 const Loader = () => {
   return (
     <div className="loader">
-      <img src={loader} alt="loader" />
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div className="loading">
+        <h1>Loading...</h1>
+      </div>
     </div>
   );
 };

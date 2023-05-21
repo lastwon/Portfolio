@@ -5,6 +5,10 @@
   counter-reset: section 1;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 .innerr {
   display: flex;
   gap: 25px;
@@ -53,6 +57,13 @@
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+@media (max-width: 600px) {
+  .job-button {
+    border-left: none;
+    border-bottom: 2px solid var(--lightest-navy);
+  }
+}
+
 button {
   cursor: pointer;
   border: 0px none;
@@ -68,6 +79,14 @@ button {
 .job-button:active,
 .job-button:focus {
   border-left: 2px solid var(--green);
+}
+
+@media (max-width: 600px) {
+  .job-button:active,
+  .job-button:focus {
+    border-left: none;
+    border-bottom: 2px solid var(--green);
+  }
 }
 
 .job-panels {
@@ -127,4 +146,11 @@ button {
   border-left: 2px solid var(--green);
   color: var(--green);
   background-color: var(--light-navy);
+}
+
+@media (max-width: 600px) {
+  .active {
+    border-left: none;
+    border-bottom: 2px solid var(--green);
+  }
 }

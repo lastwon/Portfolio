@@ -77,7 +77,7 @@ function App() {
       },
     }),
     {
-      rootMargin: "-10% 0%",
+      rootMargin: "-20% 0%",
       once: "true",
     }
   );
