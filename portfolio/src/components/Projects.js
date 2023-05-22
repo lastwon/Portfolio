@@ -23,7 +23,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      link: "https://www.google.com/",
+      link: "https://vantage-studio.netlify.app/",
       git: "https://github.com/lastwon/Vantage",
       name: "Architecture Landing Page",
       desc: "Landing page built with HTML and CSS using design from Figma",
@@ -32,7 +32,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      link: "https://www.google.com/",
+      link: "https://designer-webfolio.netlify.app/",
       git: "https://github.com/lastwon/Webfolio",
       name: "Designer Landing Page",
       desc: "Landing page built with HTML and CSS using design from Figma",
