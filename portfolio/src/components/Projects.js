@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../styles/projects.css";
 
+import { FaQuestion } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { FiExternalLink } from "react-icons/fi";
 
+import shope from "../images/shope.jpg";
 import expense from "../images/budgetmakers.jpg";
 import architecture from "../images/vantage.jpg";
 import webfolio from "../images/webfolio.jpg";
 import restaurante from "../images/restaurante.png";
 
 const Projects = () => {
+  const [hoveredProject, setHoveredProject] = useState(null);
+
   const AllProjects = [
     {
       id: 1,
+      link: "https://e-shope-60kk.onrender.com/",
+      git: "https://github.com/lastwon/E-Shop",
+      name: "Shope",
+      desc: "E-commerce platform I developed, featuring key enhancements such as product comments and ratings, a fully functional product cart system, product stock unit checks, product previews, a system for displaying similar products, a product search engine, and authentication. More about the features can be found on my GitHub.",
+      used: ["React", "Node.js", "Express.js", "MySQL"],
+      demo: ["test@test.com", "Test123*"],
+      note: "The project is hosted on a free hosting service, so loading times may be a bit longer than usual!",
+      img: shope,
+    },
+    {
+      id: 2,
       link: "https://budgetmakers.netlify.app/",
       git: "https://github.com/lastwon/React-Expense-Tracker",
       name: "Expense Tracker",
@@ -22,7 +37,7 @@ const Projects = () => {
       img: expense,
     },
     {
-      id: 2,
+      id: 3,
       link: "https://vantage-studio.netlify.app/",
       git: "https://github.com/lastwon/Vantage",
       name: "Architecture Landing Page",
@@ -31,7 +46,7 @@ const Projects = () => {
       img: architecture,
     },
     {
-      id: 3,
+      id: 4,
       link: "https://designer-webfolio.netlify.app/",
       git: "https://github.com/lastwon/Webfolio",
       name: "Designer Landing Page",
@@ -40,7 +55,7 @@ const Projects = () => {
       img: webfolio,
     },
     {
-      id: 4,
+      id: 5,
       link: "https://restaurante-vj7y.onrender.com/",
       git: "https://github.com/lastwon/Restaurant",
       name: "Restaurante",
@@ -80,6 +95,40 @@ const Projects = () => {
                   ))}
                 </ul>
                 <div className="project-links">
+                  {project.demo ? (
+                    <div
+                      className="tooltip-container"
+                      onMouseEnter={() => setHoveredProject(project.id)}
+                      onMouseLeave={() => setHoveredProject(null)}
+                    >
+                      <button>DEMO ACCOUNT</button>
+                      {hoveredProject === project.id && (
+                        <div className="tooltip">
+                          Demo: <br />
+                          <u>Username:</u> {project.demo[0]} <br />
+                          <u>Password:</u> {project.demo[1]}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {project.note ? (
+                    <div
+                      className="tooltip-container"
+                      onMouseEnter={() => setHoveredProject(project.id)}
+                      onMouseLeave={() => setHoveredProject(null)}
+                    >
+                      <button>
+                        <FaQuestion style={{ width: "20px", height: "20px" }} />
+                      </button>
+                      {hoveredProject === project.id && (
+                        <div className="tooltip">{project.note}</div>
+                      )}
+                    </div>
+                  ) : (
+                    ""
+                  )}
                   <a href={project.git} target="_blank" rel="noreferrer">
                     <FiGithub style={{ width: "20px", height: "20px" }} />
                   </a>
